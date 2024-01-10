@@ -1,6 +1,6 @@
 //variaveis
 var nomeHeroi;
-var mensagem;
+var nivel;
 
 const readline = require('readline');
 
@@ -16,40 +16,40 @@ rl.question("Digite o nome do herói: ", function(nomeInput) {
     // Solicitar a quantidade de experiência (XP)
     rl.question("Digite a quantidade de experiência (XP) do herói: ", function(xpInput) {
         const xpHeroi = parseInt(xpInput);
-
-        // Seu código com a lógica do switch vai aqui
+        
+      //estrutura de decisão
         switch (true) {
             case xpHeroi <= 1000:
-                mensagem = "Ferro";
+                nivel = "Ferro";
                 break;
             case xpHeroi >= 1001 && xpHeroi <= 2000:
-                mensagem = "Bronze";
+                nivel = "Bronze";
                 break;
             case xpHeroi >= 2001 && xpHeroi <= 5000:
-                mensagem = "Prata";
+                nivel = "Prata";
                 break;
             case xpHeroi >= 5001 && xpHeroi <= 7000:
-                mensagem = "Ouro";
+                nivel = "Ouro";
                 break;
             case xpHeroi >= 7001 && xpHeroi <= 8000:
-                mensagem = "Platina";
+                nivel = "Platina";
                 break;
             case xpHeroi >= 8001 && xpHeroi <= 9000:
-                mensagem = "Ascendente";
+                nivel = "Ascendente";
                 break;
             case xpHeroi >= 9001 && xpHeroi <= 10000:
-                mensagem = "Imortal";
+                nivel = "Imortal";
                 break;
             case xpHeroi >= 10001:
-                mensagem = "Radiante";
+                nivel = "Radiante";
                 break;
             default:
-                mensagem = "Desconhecido";
+                nivel = "Desconhecido";
                 break;
         }
 
-        // Exibir a mensagem final
-        console.log("Nome do heroi " + nomeHeroi + " está no nivel " + mensagem + ".");
+    
+        console.log("O Herói de nome " + nomeHeroi + " está no nível de " + nivel +".");
 
         rl.close();
     });
